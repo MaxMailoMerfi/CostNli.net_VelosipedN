@@ -15,23 +15,18 @@ class Program
         Console.Write("Введите свое Отчество: ");
         string patronymic = Console.ReadLine();
         Console.Clear();
-
         Console.Write("Введите свой возраст: ");
         int age = int.Parse(Console.ReadLine());
         Console.Clear();
-
         Console.Write("Введите свой Адрес (улица, дом, квартира): ");
         string address = Console.ReadLine();
         Console.Clear();
-
         Console.Write("Введите свой номер телефона: ");
         int number = int.Parse(Console.ReadLine());
         Console.Clear();
-
         Console.Write("Введите свой рост в см: ");
         double growth = double.Parse(Console.ReadLine());
         Console.Clear();
-
         Console.Write("Введите свой вес в кг: ");
         double weight = double.Parse(Console.ReadLine());
         Console.Clear();
