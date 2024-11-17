@@ -41,7 +41,6 @@
                 }
                 else //Рандом главного
                 {
-                    Console.WriteLine(kazino);
 
                     one = random.Next(1, 10);
                     tuo = random.Next(1, 10);
