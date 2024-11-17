@@ -8,7 +8,7 @@
             int bid, one, tuo, thre; // Основные
             int hack = 42, bid_hack = -1; // читы (код, сколько бабок
             int[,] num = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } }; // Масив для визуала
-            int delay = 500;// скорость анимации
+            int delay = 400, scrolls = 10;// скорость анимации, количество прокруток
             string kazino = "$Казино$"; //Название Которое будет сверху йобаного казино
 
             Console.WriteLine("Вас приветсвует йобаное казино");
@@ -51,7 +51,7 @@
 
                 //Анимация прокрутки
                 Console.Clear();
-                for (int n = 0; n < 10; n++)
+                for (int n = 0; n < scrolls-2; n++)
                 {
                     Console.WriteLine(kazino);
 
