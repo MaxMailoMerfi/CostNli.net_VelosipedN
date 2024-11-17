@@ -41,7 +41,6 @@
                 }
                 else //Рандом главного
                 {
-
                     one = random.Next(1, 10);
                     tuo = random.Next(1, 10);
                     thre = random.Next(1, 10);
@@ -49,7 +48,7 @@
 
                 //Анимация прокрутки
                 Console.Clear();
-                for (int n = 0; n < scrolls - 2; n++)
+                for (int n = 0; n < scrolls-2; n++)
                 {
                     Console.WriteLine(kazino);
 
