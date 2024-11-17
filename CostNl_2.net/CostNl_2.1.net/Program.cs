@@ -132,23 +132,6 @@
                     Thread.Sleep(delay);
                 }
 
-
-                /* Уже не нужное
-                num[1, 0] = one;
-                num[1, 1] = tuo;
-                num[1, 2] = thre;
-                for (int i = 0; i < 3; i++)
-                {
-                    Console.WriteLine();
-                    if (i == 1) Console.Write("-|"); else Console.Write(" |");
-                    for (int j = 0; j < 3; j++)
-                    {
-                        Console.Write($"{num[i, j]}|");
-                    }
-                    if (i == 1) Console.Write("-");
-                }*/
-
-
                 //Вычет и вывод результата
                 double Win;
                 if ((one == tuo) && (one == thre))
