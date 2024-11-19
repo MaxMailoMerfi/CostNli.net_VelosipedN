@@ -30,7 +30,7 @@
                     }
                 }
 
-                Console.WriteLine("\nНажмите любую клавишу для выхода...");
+                Console.WriteLine("\nНажмите любую клавишу для продолжения...");
                 Console.ReadKey();
                 Console.Clear();
             }
