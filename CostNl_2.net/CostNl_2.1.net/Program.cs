@@ -6,10 +6,11 @@
         {
             Random random = new Random();
             int bid, one, tuo, thre; // Основные
-            int hack = 42, bid_hack = -1; // читы (код, сколько бабок
             int[,] num = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } }; // Масив для визуала
+            int hack = 42, bid_hack = -1; // читы (код, сколько бабок
             int delay = 400, scrolls = 10;// скорость анимации, количество прокруток
-            string kazino = "$Казино$"; //Название Которое будет сверху йобаного казино
+            string kazino = "$Казино$", text_hack = "Код поражен твоими познаниями, но какой ценой это?"; //Название Которое будет сверху йобаного казино
+
 
             Console.WriteLine("Вас приветсвует йобаное казино");
 
@@ -21,14 +22,12 @@
                     bid = int.Parse(Console.ReadLine());
                     if (((bid % 5 == 0) && (bid > 0) && (bid <= 100)) || (bid == hack))
                     {
-                        Console.Clear();
                         break;
                     }
                     else
                     {
                         Console.Clear();
                         Console.WriteLine(kazino);
-
                         Console.WriteLine("\nНекорректный ввод");
                     }
                 }
@@ -47,13 +46,13 @@
                 }
 
                 //Анимация прокрутки
-                Console.Clear();
                 for (int n = 0; n < scrolls-2; n++)
                 {
+                    Console.Clear();
                     Console.WriteLine(kazino);
-
-                    //Хак
-                    if (bid == bid_hack) Console.WriteLine($"Ля ты знаток, но ставка будет = {bid_hack}");
+                    
+                    if (bid == bid_hack)//Хак
+                        Console.WriteLine(text_hack);
 
                     if (n == 0)
                     {
@@ -90,7 +89,6 @@
                     }
 
                     Thread.Sleep(delay);
-                    Console.Clear();
                 }
 
                 //Вывод табло
@@ -99,7 +97,7 @@
                     Console.Clear();
                     Console.WriteLine(kazino);
                     //Хак
-                    if (bid == bid_hack) Console.WriteLine($"Ля ты знаток, но ставка будет = {bid_hack}");
+                    if (bid == bid_hack) Console.WriteLine(text_hack);
 
                     for (int i = 2; i >= 0; i--)
                     {
@@ -178,6 +176,10 @@
                     {
                         Console.WriteLine("\n\nСочувствуем, но вам не повезло\nПопробуйте еще раз");
                     }
+
+                    Console.WriteLine("\nНажмите любую клавишу для продолжения...");
+                    Console.ReadKey();
+                    Console.Clear();
                 }
             }
         }
