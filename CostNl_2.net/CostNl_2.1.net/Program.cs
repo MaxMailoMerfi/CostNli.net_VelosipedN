@@ -9,7 +9,7 @@ namespace CostNl_2._1.net
             Random random = new ();
             int bid, one, tuo, thre; // Основные
             int[,] num = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } }; // Масив для визуала
-            int hack = 42, bid_hack = -1; // читы (код, сколько бабок
+            int Hack = 42, BidHack = -1; // читы (код, сколько бабок
             int delay = 400, scrolls = 10;// скорость анимации, количество прокруток
             string kazino = "$Казино$", text_hack = "\nКод поражен твоими познаниями, но какой ценой это?", input; //Название Которое будет сверху йобаного казино
 
@@ -22,10 +22,10 @@ namespace CostNl_2._1.net
                 {
                     Console.WriteLine("\nСделайте ставку то 5$ до 100$, з шагом 5$");
                     input = Console.ReadLine();
-                    if (int.TryParse(input, out bid))
+                    if (int.TryParse(input, out int namber))
                     {
                         bid = int.Parse(input);
-                        if (((bid % 5 == 0) && (bid > 0) && (bid <= 100)) || (bid == hack))
+                        if (((bid % 5 == 0) && (bid > 0) && (bid <= 100)) || (bid == Hack))
                         {
                             break;
                         }
@@ -34,9 +34,9 @@ namespace CostNl_2._1.net
                             Console.WriteLine(kazino);
                             Console.WriteLine("\nНекорректный ввод");
                 }
-                if (bid == hack) //Хак
+                if (bid == Hack) //Хак
                 {
-                    bid = bid_hack;
+                    bid = BidHack;
                     one = 7;
                     tuo = 7;
                     thre = 7;
@@ -54,7 +54,7 @@ namespace CostNl_2._1.net
                     Console.Clear();
                     Console.WriteLine(kazino);
                     
-                    if (bid == bid_hack)//Хак
+                    if (bid == BidHack)//Хак
                         Console.WriteLine(text_hack);
 
                     if (n == 0)
@@ -100,7 +100,7 @@ namespace CostNl_2._1.net
                     Console.Clear();
                     Console.WriteLine(kazino);
                     //Хак
-                    if (bid == bid_hack) Console.WriteLine(text_hack);
+                    if (bid == BidHack) Console.WriteLine(text_hack);
 
                     for (int i = 2; i >= 0; i--)
                     {
